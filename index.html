@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arianto Dwi Putro - Marine Automation Engineer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        },
+                        neon: {
+                            cyan: '#00f2fe',
+                            blue: '#4facfe',
+                            purple: '#a855f7',
+                            emerald: '#10b981',
+                            amber: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070913;
+            color: #f1f5f9;
+        }
+        
+        /* Vibrant Multi-Color Glassmorphism */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 27, 75, 0.75) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            box-shadow: 0 10px 40px -10px rgba(0, 242, 254, 0.15), 0 0 20px rgba(168, 85, 247, 0.1);
+        }
+        
+        .glass-nav {
+            background: rgba(7, 9, 19, 0.9);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(45, 212, 191, 0.2);
+        }
+
+        /* Radar & Mesh Colorful Grid Pattern */
+        .bg-vibrant-grid {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(45, 212, 191, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
+        }
+
+        /* Multicolor Glowing Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 35%, #a855f7 70%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070913;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #14b8a6, #a855f7);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2fe;
+        }
+
+        @media print {
+            header, #themeToggle, #mobileMenuBtn, #skillTabContainer, #projectFilterContainer, #contactForm, #mobileMenu, #toast, .floating-action-group, .no-print, button {
+                display: none !important;
+            }
+            body { background: #ffffff !important; color: #0f172a !important; }
+            .glass-card, .glass-nav { background: #ffffff !important; border: 1px solid #cbd5e1 !important; box-shadow: none !important; }
+            .gradient-text { background: none !important; -webkit-text-fill-color: #0369a1 !important; color: #0369a1 !important; }
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300 min-h-screen relative overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#hero" class="flex items-center gap-3.5 group">
+                    <img src="https://distronet.wordpress.com/wp-content/uploads/2026/08/ptpelican-mitra-sejati-batam_234.jpg" alt="Pelican Mitra Sejati" class="h-11 w-auto object-contain rounded-lg bg-white p-1 shadow-md group-hover:scale-105 transition-transform" onerror="if(this.src.indexOf('image_875a0e.png')===-1){this.src='image_875a0e.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');this.nextElementSibling.classList.add('flex');}">
+                    
+                    <!-- SVG Vector Fallback Logo -->
+                    <div class="hidden items-center gap-1.5 p-1.5 bg-slate-900 rounded-lg border border-teal-500/40">
+                        <svg class="h-7 w-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="12" fill="url(#logoGrad)"/>
+                            <path d="M68 22C56 22 46 30 38 42C32 50 24 64 18 72C15 76 14 80 18 80C26 80 42 70 54 58C62 50 72 38 72 28C72 24 70 22 68 22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00f2fe"/>
+                                    <stop offset="1" stop-color="#a855f7"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="flex flex-col text-[9px] font-black leading-tight tracking-tight text-teal-400">
+                            <span>PELICAN</span>
+                            <span class="text-purple-400">MITRA</span>
+                            <span class="text-white">SEJATI</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-none">
+                            Arianto Dwi Putro
+                        </span>
+                        <span class="text-[11px] font-bold tracking-wider uppercase gradient-text mt-1">
+                            Marine Automation Engineer
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                    <a href="#hero" class="hover:text-teal-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
+                    <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions & Theme Toggle -->
+                <div class="flex items-center gap-3">
+                    <button id="themeToggle" aria-label="Toggle Theme Glow" class="p-2.5 rounded-xl text-teal-400 hover:bg-teal-950/60 transition-colors focus:outline-none border border-teal-500/30 shadow-inner">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-neon-cyan"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl bg-slate-800/80 text-teal-300 border border-teal-500/30">
+                        <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                        <i data-lucide="x" id="closeIcon" class="w-6 h-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-teal-500/20 bg-[#070913]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
+            <a href="#hero" class="mobile-link block px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-teal-950/50 hover:text-teal-300">About</a>
+            <a href="#projects" class="mobile-link block px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-teal-950/50 hover:text-teal-300">Projects</a>
+            <a href="#experience" class="mobile-link block px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-teal-950/50 hover:text-teal-300">Experience</a>
+            <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-lg font-medium text-center text-white bg-gradient-to-r from-teal-500 to-purple-600 shadow-md">Contact Me</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-36 pb-24 md:pt-44 md:pb-36 bg-vibrant-grid overflow-hidden">
+        <!-- Glowing Ambient Background Orbs -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-teal-500/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-1/3 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Bio / Pitch -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-teal-950/80 border border-teal-500/40 text-teal-300 text-xs font-semibold tracking-wide uppercase shadow-lg shadow-teal-950/50">
+                        <span class="w-2.5 h-2.5 rounded-full bg-neon-cyan animate-ping"></span>
+                        Available for Marine Automation & Vessel Systems
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                        Engineering marine automation & <span class="gradient-text">vessel instrumentation</span>.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        I'm <strong class="text-white font-semibold">Arianto Dwi Putro</strong>, a Marine Automation Engineer experienced in handling cargo systems, alarm monitoring systems (AMS), navigation equipment, NMEA 2000 telemetry, and engine room automation.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#projects" class="px-7 py-4 rounded-2xl bg-gradient-to-r from-teal-500 via-cyan-500 to-purple-600 hover:opacity-95 text-white font-bold shadow-xl shadow-teal-950/60 transition-all hover:-translate-y-1 active:translate-y-0 flex items-center gap-2.5 border border-teal-300/30">
+                            <span>Explore Marine Projects</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+
+                        <button id="openResumeBtn" class="px-7 py-4 rounded-2xl border border-purple-500/40 bg-purple-950/30 hover:bg-purple-900/40 font-bold text-purple-200 transition-all flex items-center gap-2.5 shadow-lg shadow-purple-950/40">
+                            <i data-lucide="compass" class="w-4 h-4 text-neon-purple"></i>
+                            <span>View Marine CV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive HMI Vessel Simulator Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="glass-card rounded-3xl p-6 sm:p-7 shadow-2xl relative z-10 border border-teal-500/30">
+                        <div class="flex items-center justify-between pb-4 mb-4 border-b border-teal-500/20">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block shadow-sm shadow-rose-500/50"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block shadow-sm shadow-amber-500/50"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block shadow-sm shadow-emerald-500/50"></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="relative flex h-2.5 w-2.5">
+                                  <span id="hmiPulseDot" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                                  <span id="hmiSolidDot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
+                                </span>
+                                <span id="hmiStatusText" class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wider">HMI AMS • NORMAL</span>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Vessel Diagnostics & Sensor Simulator -->
+                        <div class="space-y-4 font-mono">
+                            <!-- Simulator Control Bar -->
+                            <div class="bg-[#03050c] border border-teal-500/25 rounded-2xl p-3.5 flex items-center justify-between text-xs text-slate-300 shadow-inner">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-[11px] font-bold text-teal-400">Simulate Mode:</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <button onclick="setSimMode('normal')" id="btnModeNormal" class="px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-teal-600 text-white transition-all shadow-md">Normal</button>
+                                    <button onclick="setSimMode('warning')" id="btnModeWarn" class="px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all">High Temp</button>
+                                    <button onclick="setSimMode('alarm')" id="btnModeAlarm" class="px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all">Oil Drop</button>
+                                </div>
+                            </div>
+
+                            <!-- Live Analog Sensor Gauges Grid -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <!-- Main Engine RPM Box -->
+                                <div class="bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden group shadow-sm">
+                                    <div class="text-[10px] text-teal-400 uppercase tracking-wider flex items-center justify-between">
+                                        <span>Main Engine RPM</span>
+                                        <i data-lucide="gauge" class="w-3.5 h-3.5 text-teal-400"></i>
+                                    </div>
+                                    <div class="text-xl font-extrabold text-white mt-1 font-mono flex items-baseline gap-1">
+                                        <span id="simRpmVal">1,450</span> <span class="text-xs text-slate-400 font-normal">RPM</span>
+                                    </div>
+                                    <div class="w-full bg-slate-900 rounded-full h-1.5 mt-2.5 overflow-hidden">
+                                        <div id="simRpmBar" class="bg-gradient-to-r from-teal-400 to-cyan-400 h-1.5 rounded-full transition-all duration-500" style="width: 72.5%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Exhaust Gas Temp Box -->
+                                <div id="boxEgtContainer" class="bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm">
+                                    <div class="text-[10px] text-amber-400 uppercase tracking-wider flex items-center justify-between">
+                                        <span>Exhaust Gas Temp</span>
+                                        <i data-lucide="thermometer" id="iconEgt" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    </div>
+                                    <div class="text-xl font-extrabold text-white mt-1 font-mono flex items-baseline gap-1">
+                                        <span id="simEgtVal">385.0</span> <span class="text-xs text-slate-400 font-normal">°C</span>
+                                    </div>
+                                    <div class="w-full bg-slate-900 rounded-full h-1.5 mt-2.5 overflow-hidden">
+                                        <div id="simEgtBar" class="bg-amber-400 h-1.5 rounded-full transition-all duration-500" style="width: 64%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Lube Oil Pressure Box -->
+                                <div id="boxPressContainer" class="bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm">
+                                    <div class="text-[10px] text-emerald-400 uppercase tracking-wider flex items-center justify-between">
+                                        <span>Lube Oil Press</span>
+                                        <i data-lucide="droplets" id="iconPress" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                    </div>
+                                    <div class="text-xl font-extrabold text-white mt-1 font-mono flex items-baseline gap-1">
+                                        <span id="simPressVal">4.20</span> <span class="text-xs text-slate-400 font-normal">Bar</span>
+                                    </div>
+                                    <div class="w-full bg-slate-900 rounded-full h-1.5 mt-2.5 overflow-hidden">
+                                        <div id="simPressBar" class="bg-emerald-400 h-1.5 rounded-full transition-all duration-500" style="width: 84%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CAN Bus / Modbus Status -->
+                                <div class="bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden shadow-sm">
+                                    <div class="text-[10px] text-purple-400 uppercase tracking-wider flex items-center justify-between">
+                                        <span>CAN / NMEA Bus</span>
+                                        <i data-lucide="radio" class="w-3.5 h-3.5 text-purple-400"></i>
+                                    </div>
+                                    <div class="text-sm font-bold text-white mt-1.5 font-mono flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                                        <span id="simBusStatus">J1939 Active</span>
+                                    </div>
+                                    <div class="text-[10px] text-slate-400 mt-2 font-mono">
+                                        Latency: <span class="text-teal-400 font-bold">&lt; 3ms</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Alarm & Event Console Log -->
+                            <div class="bg-[#03050c] border border-teal-500/20 rounded-2xl p-3.5 text-xs">
+                                <div class="flex items-center justify-between text-[10px] text-teal-300 uppercase tracking-wider mb-2 border-b border-teal-500/20 pb-1">
+                                    <span>AMS Event Log</span>
+                                    <span class="text-purple-400 font-bold">IEC 61162 Compliant</span>
+                                </div>
+                                <div id="simLogContainer" class="text-[11px] font-mono text-slate-300 space-y-1.5 h-12 overflow-y-auto">
+                                    <div><span class="text-teal-400">[11:48]</span> System initialized. All loops nominal.</div>
+                                    <div><span class="text-purple-400">[11:48]</span> NMEA 2000 telemetry connected.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-teal-500/20 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://rt02tamles.wordpress.com/wp-content/uploads/2026/08/1722786203812.jpg" alt="Arianto Dwi Putro" class="w-11 h-11 rounded-full object-cover ring-2 ring-teal-400/60 shadow-md" onerror="this.src='https://placehold.co/100x100/14b8a6/ffffff?text=ADP'">
+                                <div>
+                                    <div class="text-xs font-bold text-white">Arianto Dwi Putro</div>
+                                    <div class="text-[11px] text-teal-300 font-medium">• Marine Automation Engineer •</div>
+                                </div>
+                            </div>
+                            <button id="copyEmailBtn" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-teal-950/80 hover:bg-teal-900 text-teal-300 border border-teal-500/40 transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                                <span>Copy Email</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 md:py-32 bg-[#05070f]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Portfolio Showcase</h2>
+                    <p class="text-3xl font-extrabold text-white tracking-tight">Featured Engineering Work</p>
+                </div>
+                
+                <!-- Project Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="projectFilterContainer">
+                <button data-filter="all" class="project-filter active-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-teal-500 to-cyan-500 text-white transition-all shadow-md shadow-teal-950/50">All Projects</button>
+                <button data-filter="mppsv2" class="project-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-[#111827] text-teal-300 hover:bg-teal-950/50 border border-teal-500/25 transition-all">VESSEL 1</button>
+                <button data-filter="bulkerbee11" class="project-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-[#111827] text-teal-300 hover:bg-teal-950/50 border border-teal-500/25 transition-all">VESSEL 2</button>
+                <button data-filter="poslogistics1" class="project-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-[#111827] text-teal-300 hover:bg-teal-950/50 border border-teal-500/25 transition-all">VESSEL 3</button>
+                <button data-filter="sanggau" class="project-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-[#111827] text-teal-300 hover:bg-teal-950/50 border border-teal-500/25 transition-all">VESSEL 4</button>
+                <button data-filter="dsdeepventure" class="project-filter px-4 py-2.5 rounded-xl text-xs font-bold bg-[#111827] text-teal-300 hover:bg-teal-950/50 border border-teal-500/25 transition-all">VESSEL 5</button>
+            </div>
+        </div>
+
+        <!-- Project Cards Grid Container -->
+        <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <!-- Dynamically populated by JavaScript renderProjects function -->
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-24 bg-[#070913] border-y border-teal-500/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Track Record</h2>
+                <p class="text-3xl font-extrabold text-white tracking-tight">Professional Experience</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-teal-500/40 ml-4 md:ml-32 space-y-12">
+                
+                <!-- Experience Item 1 -->
+                <div class="relative pl-6 md:pl-8">
+                    <div class="hidden md:block absolute -left-32 top-1 text-right w-24 text-xs font-bold font-mono text-neon-cyan">
+                        2022 — Present
+                    </div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-teal-400 ring-4 ring-[#070913] shadow-md shadow-teal-400/50"></div>
+                    
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs md:hidden font-mono text-teal-400 font-bold">2022 — Present</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-teal-950/90 text-teal-300 border border-teal-500/40">Marine Automation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Marine Automation Engineer</h3>
+                        <p class="text-sm font-semibold text-purple-300 mb-4">PT Pelican Mitra Sejati • Batam, IDN</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed mb-6">
+                            <li>Commissioned electronic navigation, bridge telemetry, and alarm monitoring systems across offshore support and cargo vessels.</li>
+                            <li>Executed calibration of 4-20mA pressure/temperature transducers, radar level sensors, and engine safety interlocking circuits.</li>
+                            <li>Integrated NMEA 2000 CAN bus data links connecting ECDIS, autopilot, and engine room alarm units.</li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-teal-950/80 text-teal-300 border border-teal-500/30">Commissioning</span>
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-teal-950/80 text-teal-300 border border-teal-500/30">Switchboard</span>
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-purple-950/80 text-purple-300 border border-purple-500/30">Sea Trial</span>
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">Navigation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-6 md:pl-8">
+                    <div class="hidden md:block absolute -left-32 top-1 text-right w-24 text-xs font-bold font-mono text-purple-400">
+                        2014 — 2022
+                    </div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[#070913] shadow-md shadow-purple-500/50"></div>
+                    
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs md:hidden font-mono text-purple-400 font-bold">2014 — 2022</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-950/90 text-purple-300 border border-purple-500/40">Industrial Automation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Electrical & Instrumentation Technician</h3>
+                        <p class="text-sm font-semibold text-purple-300 mb-4">PT Adhya Tirta Batam • Batam, IDN</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed mb-6">
+                            <li>Handled wiring, sensor loop verification, and panel installation for SCADA and office dashboard.</li>
+                            <li>Installed and calibrated flow-pressure-level-turbidity over whole water treatment plant.</li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-purple-950/80 text-purple-300 border border-purple-500/30">PLC Wiring</span>
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-purple-950/80 text-purple-300 border border-purple-500/30">Sensor Calibration</span>
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-teal-950/80 text-teal-300 border border-teal-500/30">Modbus RTU</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-[#05070f] border-t border-teal-500/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden border border-teal-500/40">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-purple-600 text-white mb-6 shadow-xl shadow-teal-950/80">
+                    <i data-lucide="mail" class="w-8 h-8"></i>
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    Ready for Your Next Vessel Commissioning?
+                </h2>
+                <p class="text-slate-300 max-w-xl mx-auto text-base mb-8">
+                    Available for worldwide vessel deployment, automation troubleshooting, sea trials, and bridge electronics integration.
+                </p>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="space-y-4 max-w-xl mx-auto text-left">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="contactName" class="block text-xs font-bold text-teal-300 mb-1.5">Your Name</label>
+                            <input type="text" id="contactName" required placeholder="Your Name" class="w-full px-4 py-3.5 rounded-2xl border border-teal-500/30 bg-[#03050c] text-white focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all text-sm shadow-inner">
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="block text-xs font-bold text-teal-300 mb-1.5">Email Address</label>
+                            <input type="email" id="contactEmail" required placeholder="name@domain" class="w-full px-4 py-3.5 rounded-2xl border border-teal-500/30 bg-[#03050c] text-white focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all text-sm shadow-inner">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="contactSubject" class="block text-xs font-bold text-teal-300 mb-1.5">Subject</label>
+                        <input type="text" id="contactSubject" required placeholder="Vessel Sea Trial Commissioning / AMS Support" class="w-full px-4 py-3.5 rounded-2xl border border-teal-500/30 bg-[#03050c] text-white focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all text-sm shadow-inner">
+                    </div>
+                    <div>
+                        <label for="contactMessage" class="block text-xs font-bold text-teal-300 mb-1.5">Message</label>
+                        <textarea id="contactMessage" rows="4" required placeholder="Hi Arianto, we need marine automation engineer support for..." class="w-full px-4 py-3.5 rounded-2xl border border-teal-500/30 bg-[#03050c] text-white focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all text-sm shadow-inner"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-teal-500 via-cyan-500 to-purple-600 hover:opacity-95 text-white font-bold shadow-xl shadow-teal-950/60 transition-all active:scale-[0.99] flex items-center justify-center gap-2 border border-teal-300/30 cursor-pointer">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Send Engineering Inquiry</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#03050c] text-slate-400 py-12 border-t border-teal-500/20 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="https://distronet.wordpress.com/wp-content/uploads/2026/08/ptpelican-mitra-sejati-batam_234.jpg" alt="Pelican Mitra Sejati" class="h-8 w-auto object-contain bg-white p-0.5 rounded" onerror="if(this.src.indexOf('image_875a0e.png')===-1){this.src='image_875a0e.png';}else{this.src='https://placehold.co/120x40/14b8a6/ffffff?text=PELICAN';}">
+                <span class="text-slate-200 font-semibold">&copy;<span id="year">2026</span> Arianto Dwi Putro</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Group -->
+    <div class="floating-action-group fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-auto">
+        <!-- Floating Email Button -->
+        <a href="mailto:arianto.dw@pelican-ms.com" aria-label="Send Email" class="group flex items-center gap-2 px-3.5 py-3.5 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-2xl hover:opacity-95 transition-all duration-300 hover:px-4 active:scale-95 border border-teal-300/40">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-bold">Send Email</span>
+        </a>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/6281282727181" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp" class="group flex items-center gap-2 px-3.5 py-3.5 rounded-full bg-emerald-600 text-white shadow-2xl hover:bg-emerald-500 transition-all duration-300 hover:px-4 active:scale-95 border border-emerald-400/40">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-bold">WhatsApp Chat</span>
+        </a>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#03050c]/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-card max-w-3xl w-full rounded-3xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-teal-500/40">
+            <button id="closeProjectModal" aria-label="Close Modal" class="absolute top-4 right-4 p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-teal-950 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume / CV Modal -->
+    <div id="resumeModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#03050c]/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-card max-w-4xl w-full rounded-3xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-purple-500/40">
+            <button id="closeResumeModal" aria-label="Close Resume" class="absolute top-4 right-4 p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-purple-950 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="space-y-6">
+                <div class="border-b border-purple-500/30 pb-4">
+                    <h3 class="text-2xl font-bold text-white">Arianto Dwi Putro - Marine Automation CV</h3>
+                    <p class="text-sm text-purple-300">PT Pelican Mitra Sejati • Batam, Riau Islands, Indonesia</p>
+                </div>
+                <div class="space-y-4 text-sm text-slate-300">
+                    <h4 class="font-bold text-white text-base">Executive Summary</h4>
+                    <p class="leading-relaxed">
+                        Dedicated Marine Automation Engineer with expertise in ship alarm and monitoring systems (AMS), marine instrumentation, PLC automation, engine room monitoring, ECDIS calibration, and NMEA 2000 telemetry. Experienced in vessel commissioning, troubleshooting bridge navigation consoles, and maintaining system compliance with IMO and IEC marine standards.
+                    </p>
+                    
+                    <h4 class="font-bold text-white text-base">Core Marine Competencies</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-mono">
+                        <div class="p-2.5 rounded-xl bg-teal-950/60 border border-teal-500/30 text-teal-300">NMEA 2000</div>
+                        <div class="p-2.5 rounded-xl bg-purple-950/60 border border-purple-500/30 text-purple-300">Monitoring System</div>
+                        <div class="p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300">ECDIS Vector Charts</div>
+                        <div class="p-2.5 rounded-xl bg-purple-950/60 border border-purple-500/30 text-purple-300">Steering System</div>
+                        <div class="p-2.5 rounded-xl bg-teal-950/60 border border-teal-500/30 text-teal-300">PLC Automation & I/O</div>
+                        <div class="p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300">Cargo Pump</div>
+                    </div>
+                </div>
+                <div class="pt-4 flex justify-end gap-3">
+                    <button id="closeResumeBtnInner" class="px-5 py-2.5 rounded-xl border border-purple-500/40 text-sm font-bold text-purple-300 hover:bg-purple-950/50">Close</button>
+                    <a href="#contact" id="resumeContactBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-purple-600 text-white text-sm font-bold shadow-md">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="fixed bottom-36 right-6 z-50 max-w-md px-4 py-3.5 rounded-2xl bg-teal-950 text-white border border-teal-500/50 shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <i data-lucide="check-circle" class="w-5 h-5 text-teal-400"></i>
+        <span id="toastMsg" class="text-xs sm:text-sm font-medium">Notification message</span>
+    </div>
+
+    <script>
+        let currentSimMode = 'normal';
+
+        window.setSimMode = function(mode) {
+            currentSimMode = mode;
+            const btnNormal = document.getElementById('btnModeNormal');
+            const btnWarn = document.getElementById('btnModeWarn');
+            const btnAlarm = document.getElementById('btnModeAlarm');
+            const statusText = document.getElementById('hmiStatusText');
+            const pulseDot = document.getElementById('hmiPulseDot');
+            const solidDot = document.getElementById('hmiSolidDot');
+            const logContainer = document.getElementById('simLogContainer');
+            const boxEgt = document.getElementById('boxEgtContainer');
+            const boxPress = document.getElementById('boxPressContainer');
+
+            // Reset buttons
+            [btnNormal, btnWarn, btnAlarm].forEach(b => {
+                if(b) {
+                    b.className = "px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all";
+                }
+            });
+
+            const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            if (mode === 'normal') {
+                if(btnNormal) btnNormal.className = "px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-teal-600 text-white transition-all shadow-md";
+                if(statusText) {
+                    statusText.textContent = "HMI AMS • NORMAL";
+                    statusText.className = "text-xs font-mono font-bold text-teal-300 uppercase tracking-wider";
+                }
+                if(pulseDot) pulseDot.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75";
+                if(solidDot) solidDot.className = "relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500";
+                if(boxEgt) boxEgt.className = "bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(boxPress) boxPress.className = "bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(logContainer) logContainer.innerHTML = `<div><span class="text-teal-400">[${timeStr}]</span> System restored to normal operating thresholds.</div>` + logContainer.innerHTML;
+            } else if (mode === 'warning') {
+                if(btnWarn) btnWarn.className = "px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-amber-600 text-white transition-all shadow-md";
+                if(statusText) {
+                    statusText.textContent = "ALARM • HIGH EXHAUST TEMP";
+                    statusText.className = "text-xs font-mono font-bold text-amber-400 uppercase tracking-wider animate-pulse";
+                }
+                if(pulseDot) pulseDot.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75";
+                if(solidDot) solidDot.className = "relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500";
+                if(boxEgt) boxEgt.className = "bg-amber-950/50 border border-amber-600/70 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(boxPress) boxPress.className = "bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(logContainer) logContainer.innerHTML = `<div><span class="text-amber-400">[${timeStr}]</span> WARNING: Exhaust Gas Temp exceeded 520°C threshold!</div>` + logContainer.innerHTML;
+            } else if (mode === 'alarm') {
+                if(btnAlarm) btnAlarm.className = "px-3 py-1.5 rounded-xl text-[10px] font-extrabold bg-rose-600 text-white transition-all shadow-md";
+                if(statusText) {
+                    statusText.textContent = "CRITICAL • LUBE OIL DROP";
+                    statusText.className = "text-xs font-mono font-bold text-rose-400 uppercase tracking-wider animate-bounce";
+                }
+                if(pulseDot) pulseDot.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75";
+                if(solidDot) solidDot.className = "relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500";
+                if(boxEgt) boxEgt.className = "bg-[#03050c] border border-teal-500/20 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(boxPress) boxPress.className = "bg-rose-950/50 border border-rose-600/70 p-3.5 rounded-2xl relative overflow-hidden transition-colors shadow-sm";
+                if(logContainer) logContainer.innerHTML = `<div><span class="text-rose-400">[${timeStr}]</span> ALARM: Lube oil pressure dropped below 2.5 Bar! Standby pump engaged.</div>` + logContainer.innerHTML;
+            }
+        };
+
+        // Live Telemetry Ticker Simulation for HMI Simulator Dashboard
+        setInterval(() => {
+            let rpmVal, egtVal, pressVal;
+
+            if (currentSimMode === 'normal') {
+                rpmVal = Math.floor(1445 + Math.random() * 12);
+                egtVal = (384.5 + Math.random() * 1.5).toFixed(1);
+                pressVal = (4.18 + Math.random() * 0.05).toFixed(2);
+            } else if (currentSimMode === 'warning') {
+                rpmVal = Math.floor(1650 + Math.random() * 20);
+                egtVal = (525.0 + Math.random() * 8.5).toFixed(1);
+                pressVal = (3.90 + Math.random() * 0.05).toFixed(2);
+            } else {
+                rpmVal = Math.floor(1200 + Math.random() * 15);
+                egtVal = (350.0 + Math.random() * 2.0).toFixed(1);
+                pressVal = (2.10 + Math.random() * 0.15).toFixed(2);
+            }
+
+            const simRpmVal = document.getElementById('simRpmVal');
+            const simEgtVal = document.getElementById('simEgtVal');
+            const simPressVal = document.getElementById('simPressVal');
+
+            if (simRpmVal) simRpmVal.textContent = rpmVal.toLocaleString();
+            if (simEgtVal) simEgtVal.textContent = egtVal;
+            if (simPressVal) simPressVal.textContent = pressVal;
+
+            const simRpmBar = document.getElementById('simRpmBar');
+            const simEgtBar = document.getElementById('simEgtBar');
+            const simPressBar = document.getElementById('simPressBar');
+
+            if (simRpmBar) simRpmBar.style.width = `${(rpmVal / 2000) * 100}%`;
+            if (simEgtBar) simEgtBar.style.width = `${(parseFloat(egtVal) / 600) * 100}%`;
+            if (simPressBar) simPressBar.style.width = `${(parseFloat(pressVal) / 5) * 100}%`;
+        }, 2000);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            const yearElem = document.getElementById('year');
+            if (yearElem) {
+                yearElem.textContent = new Date().getFullYear();
+            }
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isOpen = !mobileMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileMenu.classList.add('hidden');
+                        if (menuIcon) menuIcon.classList.remove('hidden');
+                        if (closeIcon) closeIcon.classList.add('hidden');
+                    } else {
+                        mobileMenu.classList.remove('hidden');
+                        if (menuIcon) menuIcon.classList.add('hidden');
+                        if (closeIcon) closeIcon.classList.remove('hidden');
+                    }
+                });
+            }
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                    if (menuIcon) menuIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                });
+            });
+
+            // Toast Helper Function
+            const showToast = (message) => {
+                const toast = document.getElementById('toast');
+                const toastMsg = document.getElementById('toastMsg');
+                if (toast && toastMsg) {
+                    toastMsg.textContent = message;
+                    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                    
+                    setTimeout(() => {
+                        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                    }, 3500);
+                }
+            };
+
+            // Copy Email Clipboard
+            const copyEmailBtn = document.getElementById('copyEmailBtn');
+            if (copyEmailBtn) {
+                copyEmailBtn.addEventListener('click', () => {
+                    const email = 'arianto.dw@pelican-ms.com';
+                    const tempInput = document.createElement('input');
+                    tempInput.value = email;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                    showToast('Email copied: arianto.dw@pelican-ms.com');
+                });
+            }
+
+            // Marine Projects Dataset
+            const projectsData = [
+                {
+                    id: 'proj_ds_deep_venture_pa',
+                    title: 'Vessel 5 - Public Address & General Alarm System Upgrade',
+                    category: 'dsdeepventure',
+                    tags: ['Public Address', 'PA/GA System', 'Amplifier Upgrade', 'General Alarm', 'VoIP'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a001.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a003.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a002.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Complete upgrade of the Public Address and General Alarm (PA/GA) system, including main rack amplifier overhaul, speaker loop replacement, and audio coverage tuning on Vessel 5.',
+                    fullDesc: 'Comprehensive engineering upgrade and commissioning of the shipboard Public Address and General Alarm (PA/GA) safety network aboard Vessel 5. Scope included replacing legacy central control units with high-efficiency modular amplifiers, loop resistance testing across all deck and engine room zones, installing weatherproof marine-grade speakers in high-noise areas, and integrating emergency override microphones on the main bridge and engine control room.',
+                    metrics: 'Ensured clear voice communication and reliable emergency alarm audibility across all machinery and crew spaces during sea trials.'
+                },
+                {
+                    id: 'proj_cargo_pump',
+                    title: 'Vessel 1 - Cargo Pump Control & Automation',
+                    category: 'mppsv2',
+                    tags: ['Cargo Pump', 'Liquid Handling', 'Sensors Calibration', 'PLC Control', 'Frequency Drive'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a004.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a005.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a006.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, pressure transmitter calibration, and starter panel automation for Cargo Pump system on Vessel 1.',
+                    fullDesc: 'Complete electrical, instrumentation, and control system setup for the Cargo Pump system aboard Vessel 1. Scope included motor starter interlock testing, discharge pressure transmitter calibration, flow control valve actuation, and real-time monitoring integration with the central vessel console.',
+                    metrics: 'Achieved flow-pressure response accuracy and safe emergency relief shutdown during cargo transfer testing.'
+                },
+                {
+                    id: 'proj_rr_umas',
+                    title: 'Vessel 1 - Rolls-Royce UMAS-V',
+                    category: 'mppsv2',
+                    tags: ['Marine Controller', 'Digital I/O', 'Alarm & Monitoring', 'Analog I/O', 'mA Duplicator'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a007.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a008.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a009.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, sensor calibration, and Rolls-Royce UMAS-V alarm monitoring system configuration for Vessel 1.',
+                    fullDesc: 'Complete inspection, wiring calibration, and operational setup of the Rolls-Royce UMAS-V Alarm, Monitoring, and Control System aboard Vessel 1. Included field device testing, I/O channel verification, digital and analog signal integration for propulsion and auxiliary machinery, and alarm threshold configuration for unmanned machinery space (UMS) operations.',
+                    metrics: 'Successfully validated I/O channels and certified UMAS alarm logging for class survey approval.'
+                },
+                {
+                    id: 'proj_fifisys2025',
+                    title: 'Vessel 1 - Fire Fighting System',
+                    category: 'mppsv2',
+                    tags: ['Fire Fighting System', 'FiFi Control', 'Deluge & Safety', 'Sensors & Actuators'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a010.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a011.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a012.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, control panel logic, and safety actuator testing for Fire Fighting System on Vessel 1.',
+                    fullDesc: 'Complete electrical, control logic, and instrumentation setup for the Fire Fighting System (FiFi) aboard Vessel 1. Scope included field sensor calibration, deluge valve actuator testing, fire main pressure transducer verification, and safety panel interlock integration for emergency response operations.',
+                    metrics: 'Achieved response accuracy across emergency pressure triggers and safety alarm shutdowns.'
+                },
+                {
+                    id: 'proj_rr_steering2025',
+                    title: 'Vessel 1 - Steering System',
+                    category: 'mppsv2',
+                    tags: ['Steering', 'Hydraulic Control', 'Rudder Feedback', 'PLC Automation', 'Sea Trial'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a013.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a014.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a015.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, solenoid valve controls, rudder feedback calibration, and steering gear testing for Rolls-Royce Steering System on Vessel 1.',
+                    fullDesc: 'Comprehensive electrical, instrumentation, and control system setup for the Rolls-Royce Steering System aboard Vessel 1. Included hydraulic pump starter interlock testing, rudder angle indicator (RAI) feedback potentiometer calibration, electro-hydraulic proportional control valve wiring, and emergency tiller local control verification.',
+                    metrics: 'Achieved precision rudder response rates and seamless autopilot signal handoff during sea trials.'
+                },
+                {
+                    id: 'proj_cat_c9',
+                    title: 'Vessel 1 - Caterpillar C9 Engine',
+                    category: 'mppsv2',
+                    tags: ['Caterpillar C9', 'Engine Control', 'ECM Diagnostics', 'Sensors'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a16.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a17.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a18.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical & instrumentation commissioning, ECM diagnostic integration, and sensor testing for Caterpillar C9 engine on Vessel 1.',
+                    fullDesc: 'Comprehensive instrumentation setup and parameter tuning for Caterpillar C9 auxiliary engine aboard Vessel 1. Included wiring overhaul, sensor calibration for oil pressure, jacket water temperature, and fuel rack control, along with ECM fault code diagnostic integration into the central vessel Alarm Monitoring System (AMS).',
+                    metrics: 'Verified operational reliability and safety shutdown compliance during sea trials.'
+                },
+                {
+                    id: 'proj_ecdis_vector_chart',
+                    title: 'Vessel 2 - ECDIS Vector Chart & Navigation',
+                    category: 'bulkerbee11',
+                    tags: ['ECDIS', 'Vector Charts', 'S-57/S-63', 'Navigation System', 'Commissioning'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a019.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a020.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a021.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'ECDIS installation, S-57/S-63 vector chart calibration, sensor integration (GNSS/Gyro/Speed Log), and bridge console commissioning for Vessel 2.',
+                    fullDesc: 'Comprehensive installation, calibration, and commissioning of the Electronic Chart Display and Information System (ECDIS) aboard Vessel 2. Included S-57 and encrypted S-63 vector chart database installation, sensor interface integration (NMEA 0183/IEC 61162 feeds for GNSS, Gyrocompass, Speed Log, and AIS), anti-grounding safety contour setup, and bridge team operational verification.',
+                    metrics: 'Achieved position accuracy and zero-latency chart rendering during sea trials and class certification.'
+                },
+                {
+                    id: 'proj_ams_poslogistics1',
+                    title: 'Vessel 3 - Alarm Monitoring System',
+                    category: 'poslogistics1',
+                    tags: ['Alarm & Monitoring', 'AMS System', 'Sensors & I/O', 'PLC Control', 'Commissioning'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a022.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a023.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a024.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, sensor loop testing, and Alarm Monitoring System (AMS) setup for Vessel 3.',
+                    fullDesc: 'Complete electrical installation, wiring loop testing, and operational commissioning for the Alarm Monitoring System (AMS) aboard Vessel 3. Scope included field sensor calibration for engine room machinery, digital/analog signal integration, alarm panel wiring, and central bridge console notification verification.',
+                    metrics: 'Successfully validated alarm monitoring channels and achieved zero-fault handover for class survey approval.'
+                },
+                {
+                    id: 'proj_tank_valve_monitoring',
+                    title: 'Vessel 3 - Tank and Valve Monitoring System',
+                    category: 'poslogistics1',
+                    tags: ['Tank Monitoring', 'Valve Control', 'Sensors & Automation', 'Level Gauging', 'Commissioning'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a027.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a026.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a028.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical commissioning, tank gauging sensor calibration, and valve control monitoring system for Vessel 3.',
+                    fullDesc: 'Comprehensive electrical installation, sensor calibration, and automation setup for the Tank and Valve Monitoring System aboard Vessel 3. Scope included level transmitter loop checks, remote hydraulic/electro-pneumatic valve actuator feedback verification, and central workstation mimic screen display configuration.',
+                    metrics: 'Achieved precision in tank level telemetry and remote valve actuation response during operational testing.'
+                },
+                {
+                    id: 'proj_sperry_autopilot_poslogistics',
+                    title: 'Vessel 3 - Sperry Marine Auto Pilot',
+                    category: 'poslogistics1',
+                    tags: ['Sperry Marine', 'Auto Pilot', 'Heading Control', 'Gyro Interface', 'Navigation'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a029.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a031a.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a031.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Installation, gyrocompass heading calibration, and sea trial commissioning of the Sperry Marine Auto Pilot system on Vessel 3.',
+                    fullDesc: 'Complete electrical installation, NMEA heading signal integration, and bridge console commissioning of the Sperry Marine Auto Pilot system aboard Vessel 3. Included gyrocompass interface calibration, rudder feedback potentiometer tuning, off-heading alarm verification, and adaptive steering parameter tuning during sea trials.',
+                    metrics: 'Achieved precise course-keeping accuracy within ±0.5 degrees under dynamic sea state conditions.'
+                },
+                {
+                    id: 'proj_rr_steering_poslogistics',
+                    title: 'Vessel 3 - Rolls-Royce Steering System',
+                    category: 'poslogistics1',
+                    tags: ['Rolls-Royce Steering', 'Hydraulic Actuators', 'Rudder Feedback', 'Steering Gear', 'Commissioning'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/img_20251111_150644.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a033.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a035.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical and hydraulic commissioning, solenoid valve controls, and rudder feedback calibration for Rolls-Royce Steering System on Vessel 3.',
+                    fullDesc: 'Comprehensive electrical installation, hydraulic actuator alignment, and control system setup for the Rolls-Royce Steering System aboard Vessel 3. Scope included steering gear pump motor starter testing, proportional control valve wiring, rudder angle indicator (RAI) feedback calibration, and emergency local steering verification.',
+                    metrics: 'Achieved precision rudder response rates and successful emergency steering handoff during class sea trials.'
+                },
+                {
+                    id: 'proj_oil_discharge_management',
+                    title: 'Vessel 4 - Engineering Oil Discharge Management Equipment',
+                    category: 'sanggau',
+                    tags: ['Oil Discharge', 'ODME', 'Environmental Compliance', 'MARPOL', 'Instrumentation'],
+                    image: 'https://distronet.wordpress.com/wp-content/uploads/2026/08/a036.jpg?auto=format&fit=crop&w=600&q=80',
+                    images: [
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a037.jpg?auto=format&fit=crop&w=600&q=80',
+                        'https://distronet.wordpress.com/wp-content/uploads/2026/08/a038.jpg?auto=format&fit=crop&w=600&q=80'
+                    ],
+                    shortDesc: 'Electrical setup, sensor calibration, and performance verification of Oil Discharge Monitoring and Control Equipment (ODME) on Vessel 4.',
+                    fullDesc: 'Comprehensive installation, electrical wiring, optical sensor calibration, and testing of the Oil Discharge Monitoring and Control Equipment (ODME) aboard Vessel 4 in compliance with MARPOL Annex I regulations. Included oil content meter verification, flow rate transmitter integration, valve interlock testing, and automated logging system configuration for overboard discharge control.',
+                    metrics: 'Certified accuracy in oil content ppm measurement and automated emergency stop valve actuation.'
+                }
+            ];
+
+            // Render Projects Grid
+            const renderProjects = (filter = 'all') => {
+                const grid = document.getElementById('projectsGrid');
+                if (!grid) return;
+                grid.innerHTML = '';
+
+                const filtered = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
+
+                filtered.forEach(project => {
+                    const card = document.createElement('div');
+                    card.className = 'glass-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all flex flex-col group border border-teal-500/30';
+                    card.innerHTML = `
+                        <div class="h-48 overflow-hidden relative bg-[#03050c]">
+                            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/070913/ffffff?text=Marine+Project'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070913]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-white px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-500 to-purple-600 shadow-md">View Case Study</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex flex-wrap gap-1.5 mb-3">
+                                    ${project.tags.slice(0, 3).map(t => `<span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-teal-950/80 text-teal-300 border border-teal-500/30">${t}</span>`).join('')}
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">${project.title}</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">${project.shortDesc}</p>
+                            </div>
+                            <button data-id="${project.id}" class="project-detail-btn w-full py-3 px-4 rounded-2xl bg-teal-950/60 hover:bg-gradient-to-r hover:from-teal-500 hover:to-purple-600 hover:text-white text-xs font-bold text-teal-300 border border-teal-500/30 transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                                <span>View Engineering Case Study</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+
+                document.querySelectorAll('.project-detail-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const projectId = e.currentTarget.getAttribute('data-id');
+                        openProjectModal(projectId);
+                    });
+                });
+            };
+
+            // Project Modal Handler
+            const projectModal = document.getElementById('projectModal');
+            const closeProjectModal = document.getElementById('closeProjectModal');
+            const modalContent = document.getElementById('modalContent');
+
+            const openProjectModal = (id) => {
+                const project = projectsData.find(p => p.id === id);
+                if (!project || !modalContent || !projectModal) return;
+
+                const imagesList = project.images || [project.image];
+
+                modalContent.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            ${project.tags.map(t => `<span class="px-3 py-1 rounded-xl text-xs font-bold bg-teal-950/80 text-teal-300 border border-teal-500/30">${t}</span>`).join('')}
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">${project.title}</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">${project.fullDesc}</p>
+                        
+                        ${imagesList.length > 0 ? `
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-400 mb-3">Vessel & Equipment Gallery</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                    ${imagesList.map(img => `
+                                        <div class="rounded-2xl overflow-hidden bg-[#03050c] h-48 border border-teal-500/30 shadow-inner">
+                                            <img src="${img}" alt="Project Photo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/070913/ffffff?text=Marine+Photo'">
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        <div class="p-4.5 rounded-2xl bg-teal-950/60 border border-teal-500/40 shadow-sm">
+                            <div class="flex items-center space-x-2 text-teal-300 font-bold text-xs uppercase tracking-wider mb-1">
+                                <i data-lucide="chart-line" class="w-4 h-4"></i>
+                                <span>Operational Impact Factors</span>
+                            </div>
+                            <p class="text-slate-200 text-sm">${project.metrics}</p>
+                        </div>
+                    </div>
+                `;
+
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                projectModal.classList.remove('hidden');
+                setTimeout(() => projectModal.classList.remove('opacity-0'), 10);
+            };
+
+            const closeModals = () => {
+                if (projectModal) projectModal.classList.add('opacity-0');
+                if (resumeModal) resumeModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    if (projectModal) projectModal.classList.add('hidden');
+                    if (resumeModal) resumeModal.classList.add('hidden');
+                }, 300);
+            };
+
+            if (closeProjectModal) {
+                closeProjectModal.addEventListener('click', closeModals);
+            }
+            if (projectModal) {
+                projectModal.classList.add('hidden', 'opacity-0');
+                projectModal.addEventListener('click', (e) => {
+                    if (e.target === projectModal) closeModals();
+                });
+            }
+
+            // Resume Modal Logic
+            const resumeModal = document.getElementById('resumeModal');
+            const openResumeBtn = document.getElementById('openResumeBtn');
+            const closeResumeModal = document.getElementById('closeResumeModal');
+            const closeResumeBtnInner = document.getElementById('closeResumeBtnInner');
+
+            if (openResumeBtn && resumeModal) {
+                openResumeBtn.addEventListener('click', () => {
+                    resumeModal.classList.remove('hidden');
+                    setTimeout(() => resumeModal.classList.remove('opacity-0'), 10);
+                });
+            }
+
+            if (closeResumeModal) closeResumeModal.addEventListener('click', closeModals);
+            if (closeResumeBtnInner) closeResumeBtnInner.addEventListener('click', closeModals);
+            if (resumeModal) {
+                resumeModal.classList.add('hidden', 'opacity-0');
+                resumeModal.addEventListener('click', (e) => {
+                    if (e.target === resumeModal) closeModals();
+                });
+            }
+
+            // Project Filter Event Listeners
+            const filterContainer = document.getElementById('projectFilterContainer');
+            if (filterContainer) {
+                filterContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.project-filter');
+                    if (btn) {
+                        document.querySelectorAll('.project-filter').forEach(b => {
+                            b.classList.remove('active-filter', 'bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'shadow-md', 'shadow-teal-950/50');
+                            b.classList.add('bg-[#111827]', 'text-teal-300', 'border', 'border-teal-500/25');
+                        });
+                        btn.classList.remove('bg-[#111827]', 'text-teal-300', 'border', 'border-teal-500/25');
+                        btn.classList.add('active-filter', 'bg-gradient-to-r', 'from-teal-500', 'to-cyan-500', 'text-white', 'shadow-md', 'shadow-teal-950/50');
+                        
+                        const filterVal = btn.getAttribute('data-filter') || 'all';
+                        renderProjects(filterVal);
+                    }
+                });
+            }
+
+            // Contact Form Submission Handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const nameInput = document.getElementById('contactName');
+                    const name = nameInput && nameInput.value ? nameInput.value : 'Visitor';
+                    showToast(`Thank you, ${name}! Your inquiry has been submitted.`);
+                    contactForm.reset();
+                });
+            }
+
+            // Initial render of projects
+            renderProjects('all');
+        });
+    </script>
+</body>
+</html>
